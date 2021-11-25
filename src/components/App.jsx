@@ -1,6 +1,7 @@
 import React from "react";
+import Login from "./Login";
 
-let isLoggedIn = true;
+let isLoggedIn = false;
 
 function rendering() {
     if (isLoggedIn) {
@@ -8,20 +9,14 @@ function rendering() {
             <h1>Hello</h1>
         );
     } else {
-        return (
-            <form className="form">
-                <input type="text" placeholder="Username"/>
-                <input type="password" placeholder="Password"/>
-                <button type="submit">Login</button>
-            </form>
-        );
+        return (<Login/>);
     }
 }
 
 function App() {
     return (
         <div className="container">
-          {rendering()}
+            {rendering()}
         </div>
     );
 }
